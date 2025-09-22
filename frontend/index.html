@@ -68,3 +68,11 @@
     function viewProject(id) {
         window.location.href = `project.html?id=${id}`;
     }
+
+    async function deleteProject(id) {
+        if (confirm('האם אתה בטוח שברצונך למחוק את הפרויקט הזה?')) {
+            await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
+            alert('הפרויקט נמחק בהצלחה');
+            loadProjects();
+        }
+    }
