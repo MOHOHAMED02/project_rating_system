@@ -90,3 +90,25 @@ h2 {
 .project-card button:hover {
     background: #0056b3;
 }
+
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.star-rating input[type="radio"] {
+    display: none;
+}
+.star-rating label {
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 2px;
+}
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
