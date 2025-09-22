@@ -43,6 +43,12 @@ app.put('/api/projects/:id', (req, res) => {
     res.json(project);
 });
 
+app.delete('/api/projects/:id', (req, res) => {
+    const { id } = req.params;
+    projects = projects.filter(p => p.id != id);
+    res.json({ message: 'Project deleted' });
+});
+
 
 
 
