@@ -60,4 +60,11 @@
             <i class="fas fa-trash"></i> Delete
           </button>
         `;
+            card.addEventListener('click', () => viewProject(p.id));
+            container.appendChild(card);
+        });
+    }
 
+    function viewProject(id) {
+        window.location.href = `project.html?id=${id}`;
+    }
