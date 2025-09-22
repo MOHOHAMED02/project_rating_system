@@ -77,4 +77,14 @@
         }
     }
 
+    function editProject(id, name, description, image, link, rating) {
+        document.getElementById('name').value = name;
+        document.getElementById('description').value = description;
+        document.getElementById('image').value = image;
+        document.getElementById('link').value = link;
+        document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
+        if (rating > 0) document.getElementById(`${rating}-stars`).checked = true;
+        document.getElementById('projectForm').dataset.editId = id;
+    }
+
 
