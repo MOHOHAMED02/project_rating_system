@@ -87,3 +87,13 @@
         document.getElementById('projectForm').dataset.editId = id;
     }
 
+    document.getElementById('projectForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const id = document.getElementById('projectForm').dataset.editId;
+        const name = document.getElementById('name').value;
+        const description = document.getElementById('description').value;
+        const image = document.getElementById('image').value;
+        const link = document.getElementById('link').value;
+        const ratingInput = document.querySelector('input[name="rating"]:checked');
+        const rating = ratingInput ? ratingInput.value : 0;
+
