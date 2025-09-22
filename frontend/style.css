@@ -38,3 +38,10 @@ button {
     cursor: pointer;
     font-size: 14px;
 }
+button:hover {
+    background: #0056b3;
+}
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
