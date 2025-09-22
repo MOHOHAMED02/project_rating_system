@@ -112,5 +112,10 @@
             });
         }
 
+        document.getElementById('projectForm').reset();
+        document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
+        loadProjects();
+    });
+
 
 
