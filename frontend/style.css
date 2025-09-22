@@ -52,3 +52,41 @@ h2 {
     gap: 20px;
     padding: 10px;
 }
+.project-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.project-card h3 {
+    margin: 10px 0 5px;
+}
+.project-card a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #007bff;
+    text-decoration: none;
+}
+.project-card a:hover {
+    text-decoration: underline;
+}
+.project-card button {
+    padding: 5px 10px;
+    margin: 5px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.project-card button:hover {
+    background: #0056b3;
+}
