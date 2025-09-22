@@ -97,3 +97,11 @@
         const ratingInput = document.querySelector('input[name="rating"]:checked');
         const rating = ratingInput ? ratingInput.value : 0;
 
+        if (id) {
+            await fetch(`${API_URL}/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, description, image, link, rating })
+            });
+            delete document.getElementById('projectForm').dataset.editId;
+
