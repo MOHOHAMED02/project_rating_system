@@ -46,3 +46,21 @@
         rating = parseInt(rating) || 0;
         return '★'.repeat(rating) + '☆'.repeat(5 - rating);
     }
+    async function loadProject() {
+        const res = await fetch(`${API_URL}`);
+        const projects = await res.json();
+        const project = projects.find(p => p.id == projectId);
+        if (!project) {
+            document.getElementById('projectDetails').innerHTML = '<p>Project not found</p>';
+            return;
+        }
+        document.getElementById('projectDetails').innerHTML = `
+        ${project.image ? `<img src="${project.image}" alt="${project.name}" />` : ''}
+        <h2>${project.name}</h2>
+        <p>${project.description || ''}</p>
+        ${project.link ? `<p><a href="${project.link}" target="_blank">Visit Website</a></p>` : ''}
+        <p class="stars">${getStars(project.rating)}</p>
+        <button onclick="addPoint()">Add Point</button>
+        <button onclick="goBack()">Back to Projects</button>
+      `;
+    }
