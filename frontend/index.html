@@ -9,3 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+<h1>Project Rating System</h1>
+
+<form id="projectForm">
+    <input type="text" id="name" placeholder="Project Name" required />
+    <textarea id="description" placeholder="Project Description"></textarea>
+    <input type="text" id="image" placeholder="Image URL" />
+    <input type="text" id="link" placeholder="Link URL" />
+
+    <div class="star-rating">
+        <input type="radio" name="rating" id="5-stars" value="5" /><label for="5-stars">★</label>
+        <input type="radio" name="rating" id="4-stars" value="4" /><label for="4-stars">★</label>
+        <input type="radio" name="rating" id="3-stars" value="3" /><label for="3-stars">★</label>
+        <input type="radio" name="rating" id="2-stars" value="2" /><label for="2-stars">★</label>
+        <input type="radio" name="rating" id="1-star" value="1" /><label for="1-star">★</label>
+    </div>
