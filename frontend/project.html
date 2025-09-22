@@ -35,3 +35,14 @@
     </style>
 </head>
 <body>
+
+<div class="project-details" id="projectDetails"></div>
+<script>
+    const API_URL = 'http://localhost:5000/api/projects';
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('id');
+
+    function getStars(rating) {
+        rating = parseInt(rating) || 0;
+        return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    }
