@@ -50,5 +50,15 @@ app.delete('/api/projects/:id', (req, res) => {
 });
 
 
+app.post('/api/projects/:id/upvote', (req, res) => {
+    const { id } = req.params;
+    const project = projects.find(p => p.id == id);
+    if (!project) {
+        return res.status(404).json({ error: 'Project not found' });
+    }
+    project.rating++;
+    res.json(project);
+});
+
 
 
