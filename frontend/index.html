@@ -28,3 +28,14 @@
 
     <button type="submit">Save Project</button>
 </form>
+
+<h2>Projects</h2>
+<div class="projects-grid" id="projectsContainer"></div>
+
+<script>
+    const API_URL = 'http://localhost:5000/api/projects';
+
+    function getStars(rating) {
+        rating = parseInt(rating) || 0;
+        return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    }
