@@ -64,3 +64,8 @@
         <button onclick="goBack()">Back to Projects</button>
       `;
     }
+
+    async function addPoint() {
+        await fetch(`${API_URL}/${projectId}/upvote`, { method: 'POST' });
+        loadProject();
+    }
