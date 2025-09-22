@@ -112,3 +112,11 @@ h2 {
 .star-rating label:hover ~ label {
     color: gold;
 }
+
+.project-card .stars {
+    color: gold;
+    font-size: 18px;
+}
+button i {
+    margin-right: 5px;
+}
