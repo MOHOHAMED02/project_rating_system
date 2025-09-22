@@ -28,5 +28,21 @@ app.post('/api/projects', (req, res) => {
     res.status(201).json(newProject);
 });
 
+app.put('/api/projects/:id', (req, res) => {
+    const { id } = req.params;
+    const { name, description, image, link, rating } = req.body;
+    const project = projects.find(p => p.id == id);
+    if (!project) {
+        return res.status(404).json({ error: 'Project not found' });
+    }
+    project.name = name;
+    project.description = description;
+    project.image = image;
+    project.link = link;
+    project.rating = parseInt(rating) || 0;
+    res.json(project);
+});
+
+
 
 
