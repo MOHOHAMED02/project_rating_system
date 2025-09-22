@@ -104,4 +104,13 @@
                 body: JSON.stringify({ name, description, image, link, rating })
             });
             delete document.getElementById('projectForm').dataset.editId;
+        } else {
+            await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, description, image, link, rating })
+            });
+        }
+
+
 
